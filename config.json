@@ -19,7 +19,7 @@
    "blocks": ["994", "91", "92"],
    "evaluate_chars":  ["=>", "~>", "<", ">", "$"],
    "pairing": {
-      "state": false,
+      "state": true,
       "number": 237670256412
    },
    "replit_url": ""
