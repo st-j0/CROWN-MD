@@ -192,11 +192,11 @@ module.exports = async (client, ctx) => {
             let event = is_events[name].run
             if (m.fromMe || m.chat.endsWith('broadcast') || /pollUpdate/.test(m.mtype)) continue
             if (!m.isGroup && env.blocks.some(no => m.sender.startsWith(no))) return client.updateBlockStatus(m.sender, 'block')
-            if (setting.self && !['menfess_ev', 'anti_lien', 'anti_tagall', 'anti_virtex', 'filte'].includes(event.pluginName) && !isOwner && !m.fromMe) continue
-            if (!['anti_lien', 'anti_tagall', 'anti_virtex', 'filte'].includes(name) && users && (users.banned || new Date - users.ban_temporary < env.timeout)) continue
-            if (!['anti_lien', 'anti_tagall', 'anti_virtex', 'filte'].includes(name) && groupSet && groupSet.mute) continue
-            if (!m.isGroup && !['menfess_ev', 'chatbot', 'téléchargement_auto'].includes(name) && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < env.timeout) continue
-            if (!m.isGroup && setting.groupmode && !['system_ev', 'menfess_ev', 'chatbot', 'téléchargement_auto'].includes(name) && !isPrem) return client.sendMessageModify(m.chat, `⚠️ Utilisation du bot dans le chat privé uniquement pour les utilisateurs premium, souhaitez-vous passer au forfait premium ? envoyez *${prefixes[0]}premium* pour voir les avantages et les prix.`, m, {
+            if (setting.self && !['menfess_ev', 'anti_link', 'anti_tagall', 'antivirtex', 'filte'].includes(event.pluginName) && !isOwner && !m.fromMe) continue
+            if (!['anti_link', 'anti_tagall', 'anti_virtex', 'filte'].includes(name) && users && (users.banned || new Date - users.ban_temporary < env.timeout)) continue
+            if (!['anti_link', 'anti_tagall', 'anti_virtex', 'filte'].includes(name) && groupSet && groupSet.mute) continue
+            if (!m.isGroup && !['menfess_ev', 'chatbot', 'autotelechargement'].includes(name) && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < env.timeout) continue
+            if (!m.isGroup && setting.groupmode && !['system_ev', 'menfess_ev', 'chatbot', 'autotelechargement'].includes(name) && !isPrem) return client.sendMessageModify(m.chat, `⚠️ Utilisation du bot dans le chat privé uniquement pour les utilisateurs premium, souhaitez-vous passer au forfait premium ? envoyez *${prefixes[0]}premium* pour voir les avantages et les prix.`, m, {
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/0b32e0a0bb3b81fef9838.jpg'),
                url: setting.link
