@@ -1,7 +1,7 @@
 exports.run = {
-   usage: ['autotelechargement', 'debug', 'mode groupe', 'multiprefixe', 'nonprefixe', 'autoread', 'soi'],
+   usage: ['autotelechargement', 'debug', 'modegroupe', 'multiprefixe', 'sansprefixe', 'autoread', 'public'],
    use: 'activer / desactiver',
-   category: 'propriétaires',
+   category: 'propriétaire',
    async: async (m, {
       client,
       args,
@@ -15,8 +15,8 @@ exports.run = {
       let option = args[0].toLowerCase()
       let optionList = ['activer', 'desactiver']
       if (!optionList.includes(option)) return client.reply(m.chat, `🚩 *statut actuel* : [ ${system[type] ? 'ACTIVER' : 'DESACTIVER'} ] (Entrer *activer* ou *desactiver*)`, m)
-      let status = option != 'activé' ? false : true
-      if (system[type] == status) return client.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} a été ${option == 'activer' ? 'activer' : 'inactivé'} précédemment.`), m)
+      let status = option != 'activer' ? false : true
+      if (system[type] == status) return client.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} a été ${option == 'activer' ? 'activer' : 'inactiver'} précédemment.`), m)
       system[type] = status
       client.reply(m.chat, Func.texted('bold', `🚩 ${Func.ucword(command)} a été ${option == 'activer' ? 'activer' : 'inactiver'} avec succès.`), m)
    },

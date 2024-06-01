@@ -1,7 +1,7 @@
 exports.run = {
    usage: ['prefix', '+prefix', '-prefix'],
    use: 'symbol',
-   category: 'owner',
+   category: 'propriétaire',
    async: async (m, {
       client,
       args,
