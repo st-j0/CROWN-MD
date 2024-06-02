@@ -50,7 +50,7 @@ ET AJOUTE CE CODE DANS APPAREILS CONNECTER
 - Inscrivez-vous et créez un compte Heroku [here](https://signup.heroku.com)
 - After login, click the below **Deploy** button.
 
-   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrlit-a/crown-md)
+   [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://gitredirec.vercel.app/)
  
  - Donnez un nom à votre application `<your_app_name>` et rempli les autres champs et tu cliques sur `Deploy app` button.
  - Ça devrait prendre 5-10 minutes. 
