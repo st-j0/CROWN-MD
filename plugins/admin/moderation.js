@@ -26,7 +26,7 @@ exports.run = {
          return client.reply(m.chat, Func.jsonFormat(e), m)
       }
    },
-   admin: true,
+   admin: false,
    group: true,
    cache: true,
    location: __filename
