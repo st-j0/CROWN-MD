@@ -1,17 +1,16 @@
-
 {
-  "name":"crown md bot",
-  "description":"bot whatsapp développé par l'equipe ralzada",
-  "keywords":["bot","crownmd","baileys","whatsapp"],
-  "logo":"https://i.imgur.com/M8S9JjL.jpeg",
-  "repository":"https://github.com/mrlit-a/crown-md",
-  "succes_url":"/",
-  "stack":"container",
-  "env":{
+  "name": "crown md bot",
+  "description": "bot whatsapp développé par l'equipe ralzada",
+  "keywords": ["bot", "crownmd", "baileys", "whatsapp"],
+  "logo": "https://i.imgur.com/M8S9JjL.jpeg",
+  "repository": "https://github.com/mrlit-a/crown-md",
+  "succes_url": "/",
+  "stack": "container",
+  "env": {
     "BOT_NUMBER": {
-      "description":"ajoutez le numéro avec lequel vous souhaitez devenir un bot après être allé dans le logs Heroku, vous recevrez le code d'appairage",
-      "value":"",
-      "required":true
+      "description": "ajoutez le numéro avec lequel vous souhaitez devenir un bot après être allé dans le logs Heroku, vous recevrez le code d'appairage",
+      "value": "",
+      "required": true
     },
     "NAME_OWNER": {
       "description": "Votre nom",
@@ -27,12 +26,12 @@
   "formation": {
     "worker": {
       "quantity": 2,
-      "size": "professional"
+      "size": "Professional-2X"
     }
   },
   "addons": [
     {
-      "plan":"heroku-postgresql"
+      "plan": "heroku-postgresql"
     }
   ],
   "buildpacks": [
